@@ -1,0 +1,143 @@
+/* Estilos para componentes dinâmicos */
+
+.loading {
+  padding: var(--spacing-2xl);
+  font-size: var(--font-lg);
+  color: var(--muted-foreground);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.error {
+  padding: var(--spacing-xl);
+  background: #fee;
+  border: 1px solid #fcc;
+  border-radius: var(--radius);
+  color: #c33;
+  font-size: var(--font-sm);
+  margin-top: var(--spacing-lg);
+}
+
+.profile {
+  display: flex;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-xl);
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  animation: fadeIn 0.3s ease-in;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+.profile-info {
+  flex: 1;
+  text-align: left;
+}
+
+.profile-info h2 {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.profile-info .bio {
+  color: var(--muted-foreground);
+  font-size: var(--font-sm);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.5;
+}
+
+.stats {
+  display: flex;
+  gap: var(--spacing-xl);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.stat-number {
+  font-size: var(--font-lg);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.stat-label {
+  font-size: var(--font-xs);
+  color: var(--muted-foreground);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.repositories {
+  width: 100%;
+  padding: var(--spacing-lg) 0;
+  display: grid;
+  gap: var(--spacing-md);
+  animation: fadeIn 0.3s ease-in 0.1s both;
+}
+
+.repo {
+  padding: var(--spacing-lg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--muted);
+  transition: var(--transition);
+  text-align: left;
+}
+
+.repo:hover {
+  border-color: var(--ring);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.repo-name {
+  font-size: var(--font-md);
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  color: var(--primary);
+}
+
+.repo-stats {
+  display: flex;
+  gap: var(--spacing-lg);
+  font-size: var(--font-sm);
+  color: var(--muted-foreground);
+  flex-wrap: wrap;
+}
+
+.repo-language {
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.no-repos {
+  padding: var(--spacing-xl);
+  color: var(--muted-foreground);
+  font-size: var(--font-sm);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
